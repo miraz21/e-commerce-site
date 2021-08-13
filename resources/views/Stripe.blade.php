@@ -24,7 +24,7 @@
    </head>
    <body>
       <div class="container">
-         <h1 class="text-center" mt-3>Stripe Payment Page - HackTheStuff</h1>
+         <h1 class="text-center" mt-3>Stripe Payment Page - E-commerce Site</h1>
          <div class="row">
             <div class="col-md-6 col-md-offset-3">
                <div class="panel panel-default credit-card-box">

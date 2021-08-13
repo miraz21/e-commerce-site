@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/get-all-employee', [App\Http\Controllers\EmpController::class, 'getAllOrders']);
+
 Route::get('stripe', [App\Http\Controllers\StripeController::class, 'stripe']);
 
 Route::post('stripe', [App\Http\Controllers\StripeController::class, 'stripePost'])->name('stripe.post');
