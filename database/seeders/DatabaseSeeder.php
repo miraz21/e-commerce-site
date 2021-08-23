@@ -18,6 +18,6 @@ class DatabaseSeeder extends Seeder
        
         $this->call(UserSeeder::class);
         User::factory(10)->create();
-        Site::factory(10)->create();
+        Product::factory(10)->create();
     }
 }

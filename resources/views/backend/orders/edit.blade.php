@@ -58,7 +58,7 @@
   <thead>
     <tr>
       <th scope="col">ID</th>
-      <th scope="col">Product Name</th>
+      <th scope="col">Name</th>
       <th scope="col">price</th>
       <th scope="col">Quantity</th>
     </tr>

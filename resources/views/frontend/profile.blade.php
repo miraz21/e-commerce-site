@@ -58,7 +58,7 @@
 @foreach($orders as $key=>$item)
     <tr>
       <th scope="row">{{$key+1}}</th>
-      <td>{{$item->order_on}}</td>
+      <td>{{$item->order_no}}</td>
       <td>{{$item->price}}<span style="font-size:20px; front-weight:bold"></span></td>
       <td>{{$item->qty}}</td>
       <td>{{$item->status}}</td>

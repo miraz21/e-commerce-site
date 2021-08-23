@@ -46,7 +46,11 @@
 <form action="{{route('do.order')}}" method="post" >
   @csrf
 <div class="row">
-  <div class="col-md-4">
+  <p>
+  <a href="" class="btn btn-success my-2">Order Pament </a>
+</p>
+  <div class="col-md-4" >
+
     <label for="method" class="form-label">Payment Method</label>
     <select name="method" id="method" class="form-control">
       <option value="bkash">Bkash</option>
@@ -65,8 +69,12 @@
 </div>
 </div>
 </form>
+<p>
+  <a href="{{route('stripe.post')}}" class="btn btn-success my-2 mt-4">Order Pament Method</a>
+</p>
 @else
 <h2 class="text-center text-warning">plese add product to cart!</h2>
 @endif
 </div>
 @endsection
+

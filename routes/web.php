@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/inform', [App\Http\Controllers\Frontend\HomeController::class,'data'])->name('inform.data');
+
 Route::get('/get-all-employee', [App\Http\Controllers\EmpController::class, 'getAllOrders']);
 
 Route::get('stripe', [App\Http\Controllers\StripeController::class, 'stripe']);

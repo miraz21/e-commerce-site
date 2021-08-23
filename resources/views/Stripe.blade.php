@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>Stripe Payment Page - HackTheStuff</title>
+      <title>{{config('app.name')}}</title>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
       <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
       <style type="text/css">
@@ -21,10 +21,11 @@
          width: 61%;
          }
       </style>
+      
    </head>
    <body>
-      <div class="container">
-         <h1 class="text-center" mt-3>Stripe Payment Page - E-commerce Site</h1>
+      <div class="container mt-3">
+         <h1 class="text-center" mt-3>Stripe Payment Page</h1>
          <div class="row">
             <div class="col-md-6 col-md-offset-3">
                <div class="panel panel-default credit-card-box">
@@ -91,7 +92,7 @@
                         </div>
                         <div class="row">
                            <div class="col-xs-12">
-                              <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now ($100)</button>
+                           <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now ($100)</button>
                            </div>
                         </div>
                      </form>
