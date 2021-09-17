@@ -30,3 +30,10 @@
       </button>
     </div>
   </div>
+
+  <style type="text/css">
+
+  .search-box{
+    width: 500px !important;
+}
+  </style>

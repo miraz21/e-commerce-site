@@ -47,7 +47,7 @@
   @csrf
 <div class="row">
   <p>
-  <a href="" class="btn btn-success my-2">Order Pament </a>
+  <a href="" class="btn btn-primary my-2">Order Pament </a>
 </p>
   <div class="col-md-4" >
 
@@ -70,7 +70,7 @@
 </div>
 </form>
 <p>
-  <a href="{{route('stripe.post')}}" class="btn btn-success my-2 mt-4">Order Pament Method</a>
+  <a href="{{route('stripe.post')}}" class="btn btn-primary my-2 mt-4">Order Pament Method</a>
 </p>
 @else
 <h2 class="text-center text-warning">plese add product to cart!</h2>

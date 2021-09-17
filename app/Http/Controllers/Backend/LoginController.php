@@ -9,15 +9,15 @@ class LoginController extends Controller
 {
     public function loginForm()
     {
-    	return view('backend.login');
+        return view('backend.login');
     }
     public function login(Request $request)
     {
-    	$cred=$request->only('email','password');
-    	if(\auth()->attempt($cred)){
-    		return redirect()->route('dashboard');
-    	}
-    	return redirect()->back();
+        $cred=$request->only('email','password');
+        if(\auth()->attempt($cred)){
+            return redirect()->route('dashboard');
+        }
+        return redirect()->back();
     }
     public function logout()
     {

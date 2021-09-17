@@ -1,10 +1,21 @@
 @extends('layouts.frontend')
 @section('main')
+
+<form action="{{route('search')}}" method="post">
+  @csrf
+  <div class="container mt-4">
+  <div style="float: right;">
+  <input type="text" name="name">
+  <input type="submit" value="search">
+  </div>
+  </div>
+</form>
+
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
         <p>
-          <a href="{{route('inform.data')}}" class="btn btn-primary my-2">Urgent Information</a>
+          <a href="{{route('inform.data')}}" class="btn btn-secondary my-2">Urgent Information</a>
           <a href="{{route('cart')}}" class="btn btn-secondary my-2">Show Cart</a>
         </p>
       </div>
@@ -13,12 +24,12 @@
 
   <div class="album py-5 bg-light">
     <div class="container">
-
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <h4>New Collection</h4>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
         @foreach($products as $product)
         <div class="col">
           <div class="card shadow-sm">
-          <img src="{{asset('upload/products/'.$product->photo)}}" alt="photo" height="300">
+          <img src="{{asset('upload/products/'.$product->photo)}}" alt="photo" height="250">
 
          <div class="card-body">
             <h2>{{$product->name}}</h2>

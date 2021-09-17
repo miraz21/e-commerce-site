@@ -13,7 +13,12 @@ use App\Http\Controllers\HomeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/inform', [App\Http\Controllers\Frontend\HomeController::class,'data'])->name('inform.data');
+
+Route::get('/inform/create', [App\Http\Controllers\Frontend\HomeController::class,'create']);
+
+Route::post('/inform/create', [App\Http\Controllers\Frontend\HomeController::class,'store'])->name('data.store');
 
 Route::get('/get-all-employee', [App\Http\Controllers\EmpController::class, 'getAllOrders']);
 
@@ -24,6 +29,8 @@ Route::post('stripe', [App\Http\Controllers\StripeController::class, 'stripePost
 Route::get('/',[App\Http\Controllers\Frontend\HomeController::class,'index'])->name('home');
 
 Route::get('/product/{id}/{slug}',[App\Http\Controllers\Frontend\HomeController::class,'productShow'])->name('product.show');
+
+Route::post('search',[App\Http\Controllers\Frontend\HomeController::class,'search'])->name('search');
 
 Route::get('/add-to-cart/{id}',[App\Http\Controllers\Frontend\CartController::class,'cart'])->name('add.to.cart');
 
