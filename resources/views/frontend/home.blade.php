@@ -5,7 +5,7 @@
   @csrf
   <div class="container mt-4">
   <div style="float: right;">
-  <input type="text" name="name">
+  <input type="text" name="name" >
   <input type="submit" value="search">
   </div>
   </div>
@@ -33,7 +33,19 @@
 
          <div class="card-body">
             <h2>{{$product->name}}</h2>
-              <p class="card-text">{{$product->desc}}</p>
+              <p class="card-text">{{$product->description}}</p>
+
+              @if($product->price > 0)
+              <p class="text-justify"><strong>Product Price: </strong>
+                  @if($product->discount>0)
+                      <del class="text-danger">BDT {{$product->price}}</del>
+                        BDT {{$product->price - $product->discount}} 
+                        @else
+                        BDT {{$product->price}} 
+                        @endif
+                       </p>
+                       @endif
+                       
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a class="btn btn-sm btn-outline-secondary" href="{{route('product.show',[$product->id,\Illuminate\Support\Str::slug($product->name)])}}">View</a>

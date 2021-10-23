@@ -24,8 +24,12 @@
     <input type="number" name="price" class="form-control" id="price" value="{{$product->price}}" >
   </div>
    <div class="mb-3">
-    <label for="desc" class="form-label">Description</label>
-    <textarea name="desc" class="form-control" id="desc" cols="30" rows="5"> {{$product->desc}}</textarea>
+    <label for="discount" class="form-label">Discount</label>
+    <input type="number" name="discount" class="form-control" id="discount" value="{{$product->discount}}" >
+  </div>
+   <div class="mb-3">
+    <label for="description" class="form-label">Description</label>
+    <textarea name="description" class="form-control" id="description" cols="30" rows="5"> {{$product->description}}</textarea>
   </div>
   <div class="mb-3">
   <label for="photo" class="form-label">Photo</label>

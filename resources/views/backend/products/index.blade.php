@@ -9,6 +9,7 @@
       <th scope="col">ID</th>
       <th scope="col">Name</th>
       <th scope="col">Price</th>
+      <th scope="col">Discount</th>
       <th scope="col">Description</th>
       <th scope="col">Photo</th>
       <th scope="col">Action</th>
@@ -20,7 +21,8 @@
       <th scope="row">{{$key+1}}</th>
       <td>{{$product->name}}</td>
       <td>{{number_format($product->price)}}BDT</td>
-      <td>{{$product->desc}}</td> 
+      <td>{{number_format($product->discount)}}BDT</td>
+      <td>{{$product->description}}</td> 
       <td>
       	<img src="{{asset('upload/products/'.$product->photo)}}" alt="photo" width="100">
       </td> 

@@ -25,7 +25,8 @@ class ProductController extends Controller
         $request->validate([
         'name'=>'required',
         'price'=>'required',
-        'desc'=>'required',
+        'discount'=>'required',
+        'description'=>'required',
         'photo'=>'required',
          ]);
 
@@ -36,7 +37,8 @@ class ProductController extends Controller
          $data=[
         'name'=>$request->input('name'),
         'price'=>$request->input('price'),
-        'desc'=>$request->input('desc'),
+        'discount'=>$request->input('discount'),
+        'description'=>$request->input('description'),
         'photo'=>$newName,
         ];
 
@@ -62,7 +64,8 @@ class ProductController extends Controller
          $request->validate([
         'name'=>'required',
         'price'=>'required',
-        'desc'=>'required',
+        'discount'=>'required',
+        'description'=>'required',
          ]);
 
         $product=Product::find($id);
@@ -80,7 +83,8 @@ class ProductController extends Controller
         $data=[
         'name'=>$request->input('name'),
         'price'=>$request->input('price'),
-        'desc'=>$request->input('desc'),
+        'discount'=>$request->input('discount'),
+        'description'=>$request->input('description'),
         ];
 
          $product->update($data);

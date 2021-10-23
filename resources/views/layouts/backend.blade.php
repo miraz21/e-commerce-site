@@ -9,8 +9,6 @@
     <title>{{config('app.name')}}</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
 
-    
-
   <!-- Bootstrap core CSS -->
 <link href="{{asset('assets/backend/css/bootstrap.min.css')}}" rel="stylesheet">
 

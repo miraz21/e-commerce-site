@@ -12,6 +12,7 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.40",
         "laravel/tinker": "^2.5",
+        "nexmo/client": "^2.4",
         "stripe/stripe-php": "^7.91"
     },
     "require-dev": {

@@ -13,6 +13,8 @@ use App\Http\Controllers\HomeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+ 
+Route::get('send-sms', [App\Http\Controllers\Backend\SendSMSController::class, 'index']);
 
 Route::get('/inform', [App\Http\Controllers\Frontend\HomeController::class,'data'])->name('inform.data');
 
