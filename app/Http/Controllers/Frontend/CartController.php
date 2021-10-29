@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Product;
+use Session;
 
 class CartController extends Controller
 {
@@ -36,5 +37,16 @@ class CartController extends Controller
      
      	   $cart=session()->has('cart') ? session()->get('cart'):[];
            return view('frontend.cart',compact('cart'));
+     }
+
+     static function cartItem()
+     {
+        $userId=Session::get('user')['id'];
+        return Product::where('user_id',$userId)->count();
+     }
+     public function delete($id)
+     {
+        Product::delete($id);
+        return redirect('cart');
      }
 }

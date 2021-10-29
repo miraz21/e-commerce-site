@@ -1,0 +1,11 @@
+footer{
+    padding: 1% 10%;
+    background: #056676;
+}
+footer a{
+    color: white;
+    margin: 0 10px;
+}
+footer a:hover{
+    color: black;
+}

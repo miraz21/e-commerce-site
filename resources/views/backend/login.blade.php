@@ -17,7 +17,7 @@
 			<h2 class="text-center">Admin Login Form</h2>
 			<form action="{{route('admin.login')}}" method="post">
 				@csrf
-  <div class="mb-3">
+   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
     <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>

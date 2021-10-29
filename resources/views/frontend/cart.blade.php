@@ -10,6 +10,7 @@
       <th scope="col">Price</th>
       <th scope="col">Quantity</th>
       <th scope="col">Total Price</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -25,6 +26,9 @@
       <td>{{$item['price']}}<span style="font-size:20px; front-weight:bold"></span></td>
       <td>{{$item['quantity']}}</td>
       <td>{{$item['quantity']* $item['price']}}<span style="font-size:20px; front-weight:bold"></span></td>
+        <td>
+        <a class="btn btn-warning" href="{{route('cart', $item->cart_id)}}">Delete</a>
+      </td> 
     </tr>
     @php
     $key +=1;

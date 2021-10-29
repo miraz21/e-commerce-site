@@ -38,6 +38,10 @@ Route::get('/add-to-cart/{id}',[App\Http\Controllers\Frontend\CartController::cl
 
 Route::get('/cart',[App\Http\Controllers\Frontend\CartController::class,'showcart'])->name('cart');
 
+Route::get('/cart/add',[App\Http\Controllers\Frontend\CartController::class,'cartItem'])->name('cart.add');
+
+Route::get('/cart/delete/{id}',[App\Http\Controllers\Frontend\CartController::class,'delete'])->name('delete.cart');
+
 Route::get('/registration',[App\Http\Controllers\Frontend\UserController::class,'registration'])->name('registration');
 
 Route::post('/registration',[App\Http\Controllers\Frontend\UserController::class,'doRegistration']);

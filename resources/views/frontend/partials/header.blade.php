@@ -1,39 +1,44 @@
-  <div class="collapse bg-dark" id="navbarHeader">
+  <?php
+  use App\Http\Controllers\Frontend\CartController;
+  $total=CartController::cartItem();
+  ?>
+
+  <header class="p-3 mb-3 border-bottom">
     <div class="container">
-      <div class="row">
-        <div class="col-sm-8 col-md-7 py-4">
-          <h4 class="text-white">E-commerce</h4>
-          <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="/" class="nav-link px-2 link-secondary">Overview</a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">Inventory</a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">Customers</a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">Products</a></li>
+        </ul>
+
+        <div class="col-sm-1" ></div>
+        <div class="col-sm-2 text-center" style="padding-top: 1.5%" >
+        <ul class="nav navbar-nav cart" >
+        <li><a href="{{route('cart')}}"><i class="fas fa-cart-plus">({{$total}}) </i></a></li>    
+        </ul>
         </div>
-        <div class="col-sm-4 offset-md-1 py-4">
-          <h4 class="text-white">Contact</h4>
-          <ul class="list-unstyled">
-            @if(auth()->user())
-            <li><a href="{{route('profile')}}" class="text-white">Profile</a></li>
-            <li><a href="{{route('logout')}}" class="text-white">Logout</a></li>
-            @else
-            <li><a href="{{route('registration')}}" class="text-white">Registration</a></li>
-            <li><a href="{{route('login')}}" class="text-white">Login</a></li>
-            @endif
+        </div>
+
+        <div class="dropdown text-end">
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+             @if(auth()->user())
+            <li><a class="dropdown-item" href="{{route('profile')}}">Profile</a></li>
+            <li><a class="dropdown-item" href="{{route('logout')}}">Logout</a></li>
+             @else
+            <li><a class="dropdown-item" href="{{route('registration')}}">Registration</a></li>
+            <li><a class="dropdown-item" href="{{route('login')}}">Login</a></li>
+             @endif
           </ul>
         </div>
       </div>
     </div>
-  </div>
-  <div class="navbar navbar-dark bg-dark shadow-sm">
-    <div class="container">
-      <a href="{{route('home')}}" class="navbar-brand d-flex align-items-center">
-        <strong>{{config('app.name')}}</strong>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
-  </div>
-
-  <style type="text/css">
-
-  .search-box{
-    width: 500px !important;
-}
-  </style>
+  </header>
